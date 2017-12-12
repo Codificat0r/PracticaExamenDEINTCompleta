@@ -2,11 +2,13 @@ package com.example.practicaexamendeint.data.db.model;
 
 import android.support.annotation.NonNull;
 
+import java.io.Serializable;
+
 /**
  * Created by carlos on 11/12/2017.
  */
 
-public class Persona implements Comparable<Persona>{
+public class Persona implements Comparable<Persona>, Serializable {
     private String nombre;
     private String apellido;
     private int edad;
