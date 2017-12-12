@@ -65,7 +65,9 @@ public class PersonasAdapter extends ArrayAdapter<Persona>{
         //Relleno los elementos de la vista con los datos de la persona actual
         personaHolder.icon.setLetter(persona.getNombre().substring(0,1));
         personaHolder.txvNombreApellido.setText(persona.getNombre() + " " + persona.getApellido());
-        personaHolder.txvEdad.setText(persona.getEdad());
+        //Aqui los integer y tipos deben ser convertidos explicitamente a String si no da un error muy raro
+        //que lia mucho y hace perder mucho tiempo:
+        personaHolder.txvEdad.setText(Integer.toString(persona.getEdad()));
 
         //Devuelvo la vista
         return view;
